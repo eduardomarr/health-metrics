@@ -41,7 +41,7 @@ export default function Details() {
       </div>
 
       <h1 className="text-2xl font-bold mb-6">
-        Detalhes do {item.type} - {new Date(item.date).toLocaleDateString('pt-BR')}
+        Detalhes do {item.type} - {new Date(item.data.date).toLocaleDateString('pt-BR')}
       </h1>
 
       <div className="space-y-4">
@@ -141,7 +141,7 @@ export default function Details() {
         <div className="pt-4">
           <label className="text-sm font-medium">Data do Cálculo</label>
           <div className="p-2 border rounded">
-            {new Date(item.date).toLocaleString('pt-BR', {
+            {new Date(item.data.date).toLocaleString('pt-BR', {
               day: '2-digit',
               month: '2-digit',
               year: 'numeric',

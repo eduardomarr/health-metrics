@@ -48,10 +48,10 @@ export default function History() {
                 <TableCell>
                   {item.type === 'IMC'
                     ? `${item.data.resultado?.toFixed(1)} - ${item.data.classificacao}`
-                    : `${Math.round(item?.data?.resultado)} kcal`}
+                    : `${Math.round(item.data.resultado ?? 0)} kcal`}
                 </TableCell>
                 <TableCell>
-                  {new Date(item.date).toLocaleDateString('pt-BR', {
+                  {new Date(item.data.date).toLocaleDateString('pt-BR', {
                     day: '2-digit',
                     month: '2-digit',
                     year: 'numeric',

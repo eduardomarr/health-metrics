@@ -66,8 +66,11 @@ export default function TMB() {
     const historyItem: HistoryItem = {
       id: Date.now().toString(),
       type: 'TMB',
-      data: newTMBData,
-      date: new Date().toISOString()
+      data: {
+        ...newTMBData,
+        date: new Date().toISOString()
+      },
+
     }
 
     const currentData = loadData()
