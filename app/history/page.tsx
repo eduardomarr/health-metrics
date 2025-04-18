@@ -47,8 +47,8 @@ export default function History() {
                 </TableCell>
                 <TableCell>
                   {item.type === 'IMC'
-                    ? `${(item.data as any).resultado?.toFixed(1)} - ${(item.data as any).classificacao}`
-                    : `${Math.round((item.data as any).resultado)} kcal`}
+                    ? `${item.data.resultado?.toFixed(1)} - ${item.data.classificacao}`
+                    : `${Math.round(item?.data?.resultado)} kcal`}
                 </TableCell>
                 <TableCell>
                   {new Date(item.date).toLocaleDateString('pt-BR', {
