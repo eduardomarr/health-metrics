@@ -1,7 +1,5 @@
 # Health Metrics 🩺📊
 
-![Preview do Projeto](https://via.placeholder.com/800x400.png?text=Health+Metrics+Preview) <!-- Adicione uma imagem real -->
-
 Aplicação web moderna para cálculos de saúde e monitoramento metabólico. Calcule IMC, TMB e acompanhe seu histórico de métricas de saúde.
 
 **Demo Online:** [https://health-metrics-project.netlify.app/](https://health-metrics-project.netlify.app/)
