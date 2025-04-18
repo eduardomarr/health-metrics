@@ -25,8 +25,28 @@ export type TMBData = {
 export type HistoryItem = {
   id: string
   type: 'IMC' | 'TMB'
-  data: IMCData | TMBData
-  date: string
+  data: {
+    // Campos comuns
+    resultado?: number
+    date: string
+
+    // Campos específicos do IMC
+    peso?: number
+    altura?: number
+    classificacao?: string
+
+    // Campos específicos do TMB
+    idade?: number
+    sexo?: 'male' | 'female'
+    formula?: 'mifflin' | 'harris'
+    nivelAtividade?: string
+    needs?: number
+    suggestions?: {
+      deficit: number
+      maintenance: number
+      surplus: number
+    }
+  }
 }
 
 export type AppData = {

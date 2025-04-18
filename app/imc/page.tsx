@@ -6,7 +6,7 @@ import { AppData, IMCData } from '@/utils/types'
 import { loadData, saveData } from '@/services/storage'
 import { calculateIMC, classifyIMC } from '@/services/formulas'
 
-export default function CalculoIMC() {
+export default function IMC() {
   const [formData, setFormData] = useState<IMCData>({})
   const [result, setResult] = useState<{ imc: number; category: string } | null>(null)
   const [loaded, setLoaded] = useState(false)

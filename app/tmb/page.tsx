@@ -8,7 +8,7 @@ import { calculateBMR, calculateCaloricNeeds, getCaloricSuggestions } from '@/se
 import { ActivityLevel, Formula } from '@/services/formulas/types'
 
 
-export default function CalculoTMB() {
+export default function TMB() {
   const [formData, setFormData] = useState<Omit<TMBData, 'idade' | 'sexo' | 'peso' | 'altura'>>({})
   const [userData, setUserData] = useState<{
     idade?: number
@@ -52,10 +52,15 @@ export default function CalculoTMB() {
     const needs = calculateCaloricNeeds(bmr, formData.nivelAtividade || 'sedentary')
     const suggestions = getCaloricSuggestions(needs)
 
-    const newTMBData: TMBData = {
+    const newTMBData = {
       ...formData,
-      ...userData,
-      resultado: bmr
+      resultado: bmr,
+      needs: needs,
+      suggestions: suggestions,
+      idade: userData.idade,
+      sexo: userData.sexo,
+      formula: formData.formula,
+      nivelAtividade: formData.nivelAtividade
     }
 
     const historyItem: HistoryItem = {
