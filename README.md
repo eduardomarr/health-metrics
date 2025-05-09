@@ -40,3 +40,10 @@ Aplicação web moderna para cálculos de saúde e monitoramento metabólico. Ca
 1. Clone o repositório:
 ```bash
 git clone https://github.com/seu-usuario/health-metrics.git
+```
+
+2. instale as dependencias:
+```bash
+npm install
+```
+

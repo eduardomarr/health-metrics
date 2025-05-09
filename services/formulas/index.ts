@@ -58,15 +58,3 @@ export const getCaloricSuggestions = (maintenanceCalories: number) => {
   };
 };
 
-// Exemplo de uso:
-/*
-const bmr = calculateBMR(30, 'male', 70, 175, 'mifflin');
-const needs = calculateCaloricNeeds(bmr, 'moderate');
-const suggestions = getCaloricSuggestions(needs);
-
-console.log({
-  bmr: Math.round(bmr),
-  dailyNeeds: needs,
-  suggestions
-});
-*/
