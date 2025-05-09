@@ -47,3 +47,9 @@ git clone https://github.com/seu-usuario/health-metrics.git
 npm install
 ```
 
+3. execute o projeto:
+```bash
+npm run dev
+```
+
+
