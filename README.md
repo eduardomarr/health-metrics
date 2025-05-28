@@ -52,4 +52,24 @@ npm install
 npm run dev
 ```
 
+## 🧪 Testes
+
+- Para executar os testes automatizados e conferir o coverage, siga os passos abaixo:
+
+### Executar testes unitários
+
+- Rode o comando abaixo para executar os testes:
+```bash
+npm test
+```
+
+### Relatório de Coverage (Cobertura de Testes)
+
+- Após executar o comando acima, será gerado um relatório detalhado de cobertura. Para visualizar no navegador, siga os passos abaixo:
+
+Abra o arquivo index.html localizado em:
+```bash
+coverage/lcov-report/index.html
+```
+Este relatório interativo exibirá informações completas sobre a cobertura dos testes no código, indicando quais partes do código foram ou não cobertas pelos testes.
 

@@ -1,8 +1,9 @@
 import { ActivityLevel, Formula, IMCCategory, Sex } from "./types";
 
 export const calculateIMC = (weight: number, height: number): number => {
+  if (height <= 0) throw new Error('Altura inválida');
   const heightInMeters = height / 100;
-  return Number((weight / (heightInMeters ** 2)).toFixed(1));
+  return weight / (heightInMeters ** 2);
 };
 
 export const classifyIMC = (imc: number): IMCCategory => {
@@ -34,13 +35,14 @@ export const calculateBMR = (
 };
 
 export const getActivityMultiplier = (level: ActivityLevel): number => {
-  return {
+ const multipliers = {
     sedentary: 1.2,
     light: 1.375,
     moderate: 1.55,
     active: 1.725,
-    veryActive: 1.9
-  }[level];
+    veryActive: 1.9,
+  };
+  return multipliers[level] ?? 1.2;
 };
 
 export const calculateCaloricNeeds = (
